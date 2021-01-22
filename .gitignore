@@ -7,6 +7,7 @@
 public/css
 public/fonts
 public/js
+.eslintcache
 # testing
 /coverage
 
