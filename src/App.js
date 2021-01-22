@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import ColorPicker from './components/ColorPicker/ColorPicker.js';
+import Reset from "./components/Reset/Reset.js";
+import Result from "./components/Result/Result.js";
+import SizeSetting from "./components/SizeSetting/SizeSetting.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+		<div class="row">
+			<ColorPicker />
+			<SizeSetting />
+		</div>
+		<div class="row">
+			<Reset />
+			<Result />
+		</div>
     </div>
   );
 }

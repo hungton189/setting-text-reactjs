@@ -1,0 +1,17 @@
+.size-setting .panel-body
+{
+    height: 80px;
+}
+
+.size-setting button 
+{
+    margin-top: 10px;
+    margin-right: 8px;
+}
+
+.size-setting button:active,
+.size-setting button:focus 
+{
+    outline: none;
+    border: none;
+}
