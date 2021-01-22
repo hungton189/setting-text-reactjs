@@ -7,21 +7,33 @@ import SizeSetting from "./components/SizeSetting/SizeSetting.js";
 
 function App() {
 	const [color,setColor] = useState("red");
+	const [font,setFont] = useState(15);
 
 	const receiveColor = (color) => 
 	{
 		setColor(color);
 	}
 
+	const receiveFont = (font) =>
+	{
+		setFont(font);
+	}
+
+	const reset = () =>
+	{
+		setColor("red");
+		setFont(15);
+	}
+
 	return (
 		<div className="container">
 			<div className="row">
 				<ColorPicker color={color} receiveColor = {receiveColor}/>
-				<SizeSetting />
+				<SizeSetting font={font} receiveFont ={receiveFont}/>
 			</div>
 			<div className="row">
-				<Reset />
-				<Result color={color}/>
+				<Reset reset={reset}/>
+				<Result color={color} font={font}/>
 			</div>
 		</div>
 	);
